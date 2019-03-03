@@ -1,0 +1,25 @@
+﻿<Window x:Class="MagicPacket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MagicPacket"
+        mc:Ignorable="d"
+        Title="Magic Packet Sender | mumcu.net" Height="343.197" Width="390" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded">
+    <Grid>
+        <TextBox x:Name="txtMAC" HorizontalAlignment="Left" Height="23" Margin="118,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="PacketInfo_Changed"/>
+        <TextBox x:Name="txtIP" HorizontalAlignment="Left" Height="23" Margin="118,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="PacketInfo_Changed"/>
+        <TextBox x:Name="txtSubnetMask" HorizontalAlignment="Left" Height="23" Margin="118,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="200" TextChanged="PacketInfo_Changed"/>
+        <Label Content="MAC Address :" HorizontalAlignment="Left" Margin="17,87,0,0" VerticalAlignment="Top"/>
+        <Label Content="IP Address :" HorizontalAlignment="Left" Margin="33,127,0,0" VerticalAlignment="Top"/>
+        <Label Content="Subnet Mask :" HorizontalAlignment="Left" Margin="18,166,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="btnSendMagicPacket" Content="Send" HorizontalAlignment="Left" Margin="118,244,0,0" VerticalAlignment="Top" Width="200" Height="28" Click="BtnSendMagicPacket_Click"/>
+        <TextBox x:Name="txtPort" HorizontalAlignment="Left" Height="23" Margin="118,207,0,0" TextWrapping="Wrap" Text="7" VerticalAlignment="Top" Width="79" TextChanged="PacketInfo_Changed"/>
+        <Label Content="Port :" HorizontalAlignment="Left" Margin="65,204,0,0" VerticalAlignment="Top"/>
+        <Label Content="Saved Targets :" HorizontalAlignment="Left" Margin="16,48,0,0" VerticalAlignment="Top"/>
+        <ComboBox x:Name="cbxPackets" HorizontalAlignment="Left" Margin="118,51,0,0" VerticalAlignment="Top" Width="199" SelectionChanged="CbxPackets_SelectionChanged"/>
+        <Button x:Name="btnWebPage" Content="http://mumcu.net" HorizontalAlignment="Left" VerticalAlignment="Top" Width="383" Height="32" Click="BtnWebPage_Click"/>
+        <Button x:Name="btnDelete" Content="Delete Entry" HorizontalAlignment="Left" Margin="217,207,0,0" VerticalAlignment="Top" Width="100" IsEnabled="False" Click="BtnDelete_Click"/>
+
+    </Grid>
+</Window>
